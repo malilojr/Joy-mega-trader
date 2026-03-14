@@ -60,7 +60,8 @@
       </nav>
 
       <!-- Hamburger (mobile) -->
-      <button class="tn-burger" id="tnBurger" aria-label="Toggle navigation" aria-expanded="false">
+      <button class="tn-burger" id="tnBurger" aria-label="Toggle navigation" aria-expanded="false"
+        onclick="var d=document.getElementById('mobDrawer'),o=document.getElementById('mobOverlay');d.classList.toggle('open');o.classList.toggle('show');document.body.style.overflow=d.classList.contains('open')?'hidden':'';">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -68,23 +69,23 @@
 
   <!-- Mobile drawer -->
   <div class="mob-drawer" id="mobDrawer" aria-hidden="true">
-    <button class="mob-close" id="mobClose" aria-label="Close menu"><i class="fas fa-times"></i></button>
+    <button class="mob-close" id="mobClose" aria-label="Close menu" onclick="document.getElementById('mobDrawer').classList.remove('open');document.getElementById('mobOverlay').classList.remove('show');document.body.style.overflow=''"><i class="fas fa-times"></i></button>
     <ul>
-      <li><a href="#hero"         class="md-link">Home</a></li>
-      <li><a href="#about"        class="md-link">About</a></li>
-      <li><a href="#services"     class="md-link">Services</a></li>
-      <li><a href="#why"          class="md-link">Why Us</a></li>
-      <li><a href="#gallery"      class="md-link">Gallery</a></li>
-      <li><a href="#testimonials" class="md-link">Clients</a></li>
-      <li><a href="#contact"      class="md-link">Contact Us</a></li>
+      <li><a href="#hero"         class="md-link" onclick="document.getElementById('mobDrawer').classList.remove('open');document.getElementById('mobOverlay').classList.remove('show');document.body.style.overflow=''">Home</a></li>
+      <li><a href="#about"        class="md-link" onclick="document.getElementById('mobDrawer').classList.remove('open');document.getElementById('mobOverlay').classList.remove('show');document.body.style.overflow=''">About</a></li>
+      <li><a href="#services"     class="md-link" onclick="document.getElementById('mobDrawer').classList.remove('open');document.getElementById('mobOverlay').classList.remove('show');document.body.style.overflow=''">Services</a></li>
+      <li><a href="#why"          class="md-link" onclick="document.getElementById('mobDrawer').classList.remove('open');document.getElementById('mobOverlay').classList.remove('show');document.body.style.overflow=''">Why Us</a></li>
+      <li><a href="#gallery"      class="md-link" onclick="document.getElementById('mobDrawer').classList.remove('open');document.getElementById('mobOverlay').classList.remove('show');document.body.style.overflow=''">Gallery</a></li>
+      <li><a href="#testimonials" class="md-link" onclick="document.getElementById('mobDrawer').classList.remove('open');document.getElementById('mobOverlay').classList.remove('show');document.body.style.overflow=''">Clients</a></li>
+      <li><a href="#contact"      class="md-link" onclick="document.getElementById('mobDrawer').classList.remove('open');document.getElementById('mobOverlay').classList.remove('show');document.body.style.overflow=''">Contact Us</a></li>
     </ul>
     <!-- UPDATE contact info -->
     <div class="md-contact">
       <a href="tel:+255700000000"><i class="fas fa-phone"></i> +255 700 000 000</a>
-      <a href="/cdn-cgi/l/email-protection#eb82858d84ab818492868e8c8abf998a8f8e99c58884c59f91"><i class="fas fa-envelope"></i> <span class="__cf_email__" data-cfemail="aac3c4ccc5eac0c5d3c7cfcdcbfed8cbcecfd884c9c584ded0">[email&#160;protected]</span></a>
+      <a href="mailto:info@joymegaTrader.co.tz"><i class="fas fa-envelope"></i> info@joymegaTrader.co.tz</a>
     </div>
   </div>
-  <div class="mob-overlay" id="mobOverlay"></div>
+  <div class="mob-overlay" id="mobOverlay" onclick="document.getElementById('mobDrawer').classList.remove('open');this.classList.remove('show');document.body.style.overflow=''"></div>
 
   <!-- ===================== MAIN CONTENT ===================== -->
   <main class="main-wrap">
@@ -540,7 +541,7 @@
       </div>
       <div class="fm-bottom">
         <p>&copy; <span id="year"></span> Joy Mega Trader. All Rights Reserved.</p>
-        <p>Designed with <i class="fas fa-heart"></i> by Joshua Malilo</p>
+        <p>Designed with <i class="fas fa-heart"></i> in Tanzania</p>
       </div>
     </footer>
 
