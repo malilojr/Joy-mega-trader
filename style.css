@@ -561,6 +561,8 @@ ul   { list-style: none; }
 }
 
 /* ===== RESPONSIVE ===== */
+
+/* ── 1100px: tablet landscape ── */
 @media (max-width: 1100px) {
   .tn-links { gap: 0; }
   .ae-wrap, .ws-inner, .tb-inner { grid-template-columns: 1fr; gap: 48px; }
@@ -569,38 +571,134 @@ ul   { list-style: none; }
   .t-large { grid-row: auto; grid-column: 1 / -1; }
   .fm-top { grid-template-columns: 1fr; }
   .fm-mid { grid-template-columns: repeat(2,1fr); }
+  .about-ed, .services-bento, .why-strip, .testi-big { padding-left: 48px; padding-right: 48px; }
 }
+
+/* ── 960px: hamburger kicks in ── */
 @media (max-width: 960px) {
-  /* hide text links, show hamburger */
-  .tn-links   { display: none; }
-  .tn-burger  { display: flex; }
+  .tn-links  { display: none; }
+  .tn-burger { display: flex; }
 }
+
+/* ── 900px: hero stacks, contact stacks ── */
 @media (max-width: 900px) {
   .hero-split { grid-template-columns: 1fr; }
-  .hs-right { height: 55vw; min-height: 300px; }
+  .hs-left { padding: 80px 48px 60px; min-height: 60vh; }
   .hs-left::after { display: none; }
+  .hs-right { height: 56vw; min-height: 260px; }
+  .hs-scroll-hint { display: none; }
   .contact-dark { grid-template-columns: 1fr; }
   .cd-right { padding: 48px; }
   .cd-left  { padding: 64px 48px; }
+  .tb-inner { grid-template-columns: 1fr; }
+  .tb-label-col h2 { font-size: 2rem; }
 }
+
+/* ── 768px: general mobile ── */
 @media (max-width: 768px) {
-  .about-ed, .services-bento, .why-strip, .testi-big { padding: 80px 24px; }
-  .gallery-scroll { padding: 80px 0 60px; }
-  .gs-header, .gs-track, .gs-controls { padding-left: 24px; padding-right: 24px; }
-  .cd-left  { padding: 48px 24px; }
-  .cd-right { padding: 40px 24px; }
-  .fm-top, .fm-mid, .fm-bottom { padding-left: 24px; padding-right: 24px; }
-  .fm-mid { grid-template-columns: 1fr 1fr; }
-  .bento-grid { grid-template-columns: 1fr; padding: 0; }
-  .ws-features { grid-template-columns: 1fr; }
-  .cf-row { grid-template-columns: 1fr; }
-  .hs-left { padding: 60px 24px; }
+  :root { --topnav-h: 60px; }
+
+  .about-ed, .services-bento, .why-strip, .testi-big { padding: 64px 20px; }
+  .gallery-scroll { padding: 64px 0 48px; }
+  .gs-header   { padding: 0 20px; margin-bottom: 28px; flex-direction: column; align-items: flex-start; gap: 8px; }
+  .gs-track    { padding: 0 20px 16px; gap: 12px; }
+  .gs-controls { padding: 16px 20px 0; }
+  .gs-item     { flex: 0 0 78vw; }
+
+  .hs-left { padding: 56px 20px 48px; }
+  .hs-headline { font-size: clamp(2.4rem, 10vw, 3.5rem); }
   .hs-stat-strip { grid-template-columns: repeat(2,1fr); }
+  .hs-stat strong { font-size: 1.4rem; }
+
+  .ae-wrap { grid-template-columns: 1fr; }
+  .ae-label-col img { height: 280px; }
+  .ae-img-tag { bottom: -12px; right: 0; padding: 14px 18px; }
+  .ae-yr { font-size: 1.8rem; }
+
+  .sb-header { padding: 0; }
+  .bento-grid { grid-template-columns: 1fr; gap: 12px; padding: 0; }
+  .t-large img { height: 220px; }
+  .bento-tile { min-height: 0; }
+
+  .ws-inner { grid-template-columns: 1fr; gap: 36px; }
+  .ws-features { grid-template-columns: 1fr; gap: 14px; }
+  .ws-feat { padding: 20px; }
+
+  .testi-big { padding: 64px 20px; }
+  .tb-inner { grid-template-columns: 1fr; gap: 32px; }
+  .tb-cards { gap: 16px; }
+  .tb-card { padding: 24px 20px; }
+
+  .contact-dark { grid-template-columns: 1fr; }
+  .cd-left  { padding: 56px 20px 40px; }
+  .cd-right { padding: 40px 20px; }
+  .cf-row   { grid-template-columns: 1fr; }
+
+  .fm-top    { padding: 40px 20px 0; gap: 24px; }
+  .fm-mid    { padding: 32px 20px; grid-template-columns: 1fr 1fr; gap: 28px; }
+  .fm-bottom { padding: 20px; flex-direction: column; text-align: center; gap: 6px; }
+  .fm-news   { flex-direction: column; }
+  .fm-news input  { width: 100%; border-radius: 2px; }
+  .fm-news button { width: 100%; border-radius: 2px; }
+
+  .wa-float { bottom: 80px; right: 16px; width: 46px; height: 46px; font-size: 1.3rem; }
+  .btt      { bottom: 24px; right: 16px; width: 40px; height: 40px; }
 }
+
+/* ── 480px: small phones ── */
 @media (max-width: 480px) {
-  .tn-wordmark .tn-name { font-size: 1rem; }
-  .fm-mid { grid-template-columns: 1fr; }
-  .fm-top { gap: 28px; }
-  .hs-actions { flex-direction: column; align-items: flex-start; }
-  .gs-item { flex: 0 0 280px; }
+  :root { --topnav-h: 56px; }
+
+  .tn-mark    { width: 36px; height: 36px; font-size: 0.78rem; }
+  .tn-name    { font-size: 0.95rem; }
+  .tn-tagline { font-size: 0.55rem; }
+
+  .hs-left    { padding: 48px 16px 40px; }
+  .hs-headline { font-size: clamp(2rem, 11vw, 2.8rem); }
+  .hs-body    { font-size: 0.9rem; }
+  .hs-actions { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .hs-right   { height: 60vw; min-height: 220px; }
+  .hs-stat-strip { grid-template-columns: repeat(2,1fr); }
+  .hs-stat    { padding: 14px 8px; }
+  .hs-stat strong { font-size: 1.2rem; }
+  .hs-contact-strip { flex-direction: column; gap: 10px; }
+
+  .about-ed, .services-bento, .why-strip, .testi-big { padding: 52px 16px; }
+  .sb-header  { margin-bottom: 28px; }
+
+  .ae-content-col h2 { font-size: 2rem; }
+  .ae-pillars { gap: 8px; }
+  .ae-pillar  { font-size: 0.75rem; padding: 6px 12px; }
+  .ae-label-col img { height: 230px; }
+
+  .t-large img { height: 180px; }
+  .t-large .bt-body { padding: 20px; }
+  .t-dark, .t-gold  { padding: 22px 18px; }
+  .t-img-sm .bt-body { padding: 16px; }
+
+  .ws-intro h2 { font-size: 1.8rem; }
+  .ws-feat     { padding: 16px; gap: 12px; }
+  .wsf-icon    { width: 38px; height: 38px; font-size: 0.9rem; }
+
+  .tb-label-col h2 { font-size: 1.8rem; }
+  .tb-card    { padding: 20px 16px; }
+  .tb-card > p { font-size: 0.9rem; }
+
+  .gs-item    { flex: 0 0 88vw; }
+  .gs-item img { height: 220px; }
+
+  .cd-left    { padding: 48px 16px; }
+  .cd-right   { padding: 32px 16px; }
+  .cd-wa      { font-size: 0.85rem; padding: 13px 18px; }
+
+  .fm-top     { padding: 36px 16px 0; }
+  .fm-mid     { padding: 28px 16px; grid-template-columns: 1fr; gap: 24px; }
+  .fm-bottom  { padding: 16px; }
+  .fm-brand   { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .fm-news input, .fm-news button { font-size: 0.85rem; }
+
+  .ticker-inner span { padding: 0 12px; font-size: 0.68rem; }
+
+  .wa-float { width: 44px; height: 44px; font-size: 1.2rem; bottom: 76px; right: 14px; }
+  .btt      { width: 38px; height: 38px; font-size: 0.8rem; bottom: 22px; right: 14px; }
 }

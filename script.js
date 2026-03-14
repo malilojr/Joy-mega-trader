@@ -42,15 +42,19 @@ const mobClose   = document.getElementById('mobClose');
 const mobOverlay = document.getElementById('mobOverlay');
 
 function openDrawer()  {
+  if (!mobDrawer || !mobOverlay) return;
   mobDrawer.classList.add('open');
   mobOverlay.classList.add('show');
   mobDrawer.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
   if (tnBurger) tnBurger.setAttribute('aria-expanded', 'true');
 }
 function closeDrawer() {
+  if (!mobDrawer || !mobOverlay) return;
   mobDrawer.classList.remove('open');
   mobOverlay.classList.remove('show');
   mobDrawer.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
   if (tnBurger) tnBurger.setAttribute('aria-expanded', 'false');
 }
 
