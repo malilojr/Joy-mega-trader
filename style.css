@@ -60,22 +60,21 @@ ul   { list-style: none; }
 
 /* Logo */
 .topnav-logo {
-  display: flex; align-items: center; gap: 12px; flex-shrink: 0;
+  display: flex; align-items: center; flex-shrink: 0;
+  text-decoration: none;
 }
-.tn-mark {
-  font-family: var(--ff-body); font-weight: 700; font-size: 0.88rem; letter-spacing: 0.06em;
-  color: var(--slate); background: var(--gold);
-  width: 44px; height: 44px; border-radius: 6px;
-  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+.tn-logo-img {
+  height: 54px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  /* Slight brightness boost so logo pops on the dark navbar */
+  filter: brightness(1.08) drop-shadow(0 1px 6px rgba(0,0,0,0.35));
+  transition: filter 0.3s ease, transform 0.3s ease;
 }
-.tn-wordmark { display: flex; flex-direction: column; line-height: 1.15; }
-.tn-name {
-  font-family: var(--ff-disp); font-size: 1.25rem; font-weight: 700;
-  color: var(--white); letter-spacing: 0.01em;
-}
-.tn-tagline {
-  font-size: 0.62rem; font-weight: 600; letter-spacing: 0.18em;
-  text-transform: uppercase; color: var(--gold);
+.topnav-logo:hover .tn-logo-img {
+  filter: brightness(1.15) drop-shadow(0 2px 10px rgba(201,162,39,0.4));
+  transform: scale(1.03);
 }
 
 /* Nav links */
@@ -501,15 +500,16 @@ ul   { list-style: none; }
   padding: 64px 80px 48px; border-bottom: 1px solid rgba(255,255,255,0.07);
   display: grid; grid-template-columns: auto 1fr auto; gap: 48px; align-items: center;
 }
-.fm-brand { display: flex; align-items: center; gap: 14px; }
-.fm-mark {
-  font-family: var(--ff-body); font-weight: 700; font-size: 0.9rem;
-  background: var(--gold); color: var(--ink);
-  width: 46px; height: 46px; display: flex; align-items: center; justify-content: center;
-  border-radius: 6px; letter-spacing: 0.06em; flex-shrink: 0;
+.fm-brand { display: flex; align-items: flex-start; }
+.fm-logo-img {
+  height: 72px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  /* Increase brightness so logo is vivid on the dark footer */
+  filter: brightness(1.1) drop-shadow(0 1px 8px rgba(0,0,0,0.4));
+  margin-bottom: 16px;
 }
-.fm-name { display: block; font-weight: 700; color: var(--white); font-size: 1rem; line-height: 1.1; }
-.fm-tag  { display: block; font-size: 0.65rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); margin-top: 3px; }
 .fm-desc { font-size: 0.85rem; line-height: 1.8; max-width: 400px; }
 .fm-news { display: flex; border-radius: 2px; overflow: hidden; max-width: 340px; width: 100%; }
 .fm-news input { flex: 1; padding: 12px 14px; border: none; background: rgba(255,255,255,0.08); color: var(--white); font-family: var(--ff-body); font-size: 0.85rem; outline: none; }
@@ -653,9 +653,8 @@ ul   { list-style: none; }
 @media (max-width: 480px) {
   :root { --topnav-h: 56px; }
 
-  .tn-mark    { width: 36px; height: 36px; font-size: 0.78rem; }
-  .tn-name    { font-size: 0.95rem; }
-  .tn-tagline { font-size: 0.55rem; }
+  .tn-logo-img  { height: 42px; }
+  .fm-logo-img  { height: 56px; }
 
   .hs-left    { padding: 48px 16px 40px; }
   .hs-headline { font-size: clamp(2rem, 11vw, 2.8rem); }
@@ -698,7 +697,9 @@ ul   { list-style: none; }
   .fm-top     { padding: 36px 16px 0; }
   .fm-mid     { padding: 28px 16px; grid-template-columns: 1fr; gap: 24px; }
   .fm-bottom  { padding: 16px; }
-  .fm-brand   { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .fm-brand   { flex-direction: column; align-items: flex-start; gap: 0; }
+  .fm-logo-img { height: 64px; }
+  .tn-logo-img { height: 46px; }
   .fm-news input, .fm-news button { font-size: 0.85rem; }
 
   .ticker-inner span { padding: 0 12px; font-size: 0.68rem; }
