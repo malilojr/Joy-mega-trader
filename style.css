@@ -111,8 +111,12 @@ ul   { list-style: none; }
 /* ===== MOBILE DRAWER ===== */
 .mob-drawer {
   position: fixed; top: 0; right: -100%; width: 280px; height: 100vh;
-  background: var(--slate); z-index: 1000; padding: 80px 32px 40px;
+  background: rgba(30, 45, 64, 0.82);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  z-index: 1000; padding: 80px 32px 40px;
   transition: right 0.35s var(--ease); display: flex; flex-direction: column; gap: 8px;
+  border-left: 1px solid rgba(255,255,255,0.08);
 }
 .mob-drawer.open { right: 0; }
 .mob-close { position: absolute; top: 18px; right: 20px; background: none; border: none; color: rgba(255,255,255,0.6); font-size: 1.2rem; cursor: pointer; }
