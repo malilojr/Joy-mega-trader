@@ -76,12 +76,12 @@ ul   { list-style: none; }
   text-decoration: none;
 }
 .tn-logo-img {
-  height: 54px;
+  height: 64px;
   width: auto;
   object-fit: contain;
   display: block;
   /* Slight brightness boost so logo pops on the dark navbar */
-  filter: brightness(1.08) drop-shadow(0 1px 6px rgba(0,0,0,0.35));
+  filter: brightness(1.15) drop-shadow(0 2px 8px rgba(0,0,0,0.4));
   transition: filter 0.3s ease, transform 0.3s ease;
 }
 .topnav-logo:hover .tn-logo-img {
@@ -665,7 +665,7 @@ ul   { list-style: none; }
 @media (max-width: 480px) {
   :root { --topnav-h: 56px; }
 
-  .tn-logo-img  { height: 42px; }
+  .tn-logo-img  { height: 50px; }
   .fm-logo-img  { height: 56px; }
 
   .hs-left    { padding: 48px 16px 40px; }
@@ -711,7 +711,7 @@ ul   { list-style: none; }
   .fm-bottom  { padding: 16px; }
   .fm-brand   { flex-direction: column; align-items: flex-start; gap: 0; }
   .fm-logo-img { height: 64px; }
-  .tn-logo-img { height: 46px; }
+  .tn-logo-img { height: 54px; }
   .fm-news input, .fm-news button { font-size: 0.85rem; }
 
   .ticker-inner span { padding: 0 12px; font-size: 0.68rem; }
